@@ -57,13 +57,14 @@ type TaskColumnProps = {
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "task",
     drop: (item: { id: number }) => moveTask(item.id, status),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     collect: (monitor: any) => ({
       isOver: !!monitor.isOver(),
     }),
   }));
 //task count
   const tasksCount = tasks.filter((taks)=>taks.status===status).length;
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
   const statusColor: any = {
     "To Do": "#2563EB",
     "Work In Progress": "#059669",
@@ -122,6 +123,7 @@ const Task=({task}:Task)=>{
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "task",
     item: { id: task.id },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     collect: (monitor: any) => ({
       isDragging: !!monitor.isDragging(),
     }),

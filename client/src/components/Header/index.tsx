@@ -2,8 +2,9 @@ import React from 'react'
 
 type Props = {
     name:string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     buttonComponent?:any;
-    isSmallText?:Boolean;
+    isSmallText?:boolean;
 }
 
 const Header = ({name,buttonComponent,isSmallText = false}: Props) => {

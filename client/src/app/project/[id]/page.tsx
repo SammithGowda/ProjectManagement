@@ -1,6 +1,6 @@
 "use client"
 
-import React,{ useState } from 'react'
+import React,{ useEffect, useState } from 'react'
 import ProjectHeader from "./ProjectHeader"
 import Board from '../boardView'
 import ListView from '../listView'
@@ -11,11 +11,23 @@ type Props = {
     params:Promise<{id:string}>
 }
 
-const page = ({params}: Props) => {
-  const { id } = React.use(params);
-  const [activeTab, setActiveTab] = useState("");
+const Page = ({params}: Props) => {
+  const [id, setId] = useState<string | null>(null)
+  const [activeTab, setActiveTab] = useState("Board");
   const [isModalNewTaskOpen, setIsModalNewTaskOpen] = useState(false);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const resolvedParams = await params;
+      setId(resolvedParams.id);
+    };
+
+    fetchData();
+  }, [params])
+
+  if (id === null) {
+    return <div>Loading...</div>;  // Loading state while the ID is being fetched
+  }
   return (
     <div>
       <ModalNewTask
@@ -40,4 +52,4 @@ const page = ({params}: Props) => {
   )
 }
 
-export default page
+export default Page
