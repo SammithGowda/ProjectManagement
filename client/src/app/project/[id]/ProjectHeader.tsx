@@ -1,4 +1,4 @@
-import { Clock, Filter, Grid3x3, Grid3X3, Grid3X3Icon, icons, List, PlusSquare, Share2, Table } from 'lucide-react';
+import { Clock, Filter, Grid3x3, Grid3X3, List, PlusSquare, Share2, Table } from 'lucide-react';
 import React,{useState} from 'react'
 import Header from 'src/components/Header';
 import ModalNewProject from '../modalNewProject';

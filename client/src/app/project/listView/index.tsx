@@ -8,7 +8,7 @@ type ListViewProps = {
     setIsModalNewTaskOpen: (isOpen: boolean) => void;
   };
 
-const ListView = ({id,setIsModalNewTaskOpen}: ListViewProps) => {
+const ListView = ({id}: ListViewProps) => {
     const {data:tasks,isLoading,error} = useGetTasksQuery({projectId:Number(id)})
 
     if (isLoading) return <div>Loading...</div>;

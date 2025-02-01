@@ -1,6 +1,6 @@
 "use client"
 
-import React,{useState} from 'react'
+import React,{ useState } from 'react'
 import ProjectHeader from "./ProjectHeader"
 import Board from '../boardView'
 import ListView from '../listView'

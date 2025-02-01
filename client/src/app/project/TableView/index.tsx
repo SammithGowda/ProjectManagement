@@ -66,7 +66,7 @@ const columns : GridColDef[]=[
 ]
 
 
-const TableView = ({id,setIsModalNewTaskOpen}: Props) => {
+const TableView = ({id}: Props) => {
 const {data:tasks,isLoading,error} = useGetTasksQuery({projectId:Number(id)})
 const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
 
