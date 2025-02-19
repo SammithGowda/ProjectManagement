@@ -168,7 +168,7 @@ const Task=({task}:Task)=>{
     >
       {task.attachments && task.attachments.length > 0 && (
         <Image
-          src={`/${task.attachments[0].fileURL}`}
+          src={`https://dummyimage.com/600x400/000/fff.png`}
           alt={task.attachments[0].fileName}
           width={400}
           height={200}

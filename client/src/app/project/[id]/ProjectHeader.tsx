@@ -19,7 +19,7 @@ const ProjectHeader = ({activeTab,setActiveTab}: Props) => {
       />
 
       <Header 
-        name='Product Design Development'
+        name='Development'
         buttonComponent={
           <button
             className="flex items-center rounded-md bg-blue-primary px-3 py-2 text-white hover:bg-blue-600"

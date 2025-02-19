@@ -27,7 +27,7 @@ const Navbar = () => {
       </div>
 
       {/* Icons */}
-      <div className='flex items-center border-2 border-red-500'>
+      <div className='flex items-center'>
         <button
           className={
             isDarkMode 
